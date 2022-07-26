@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <button onclick="handleClick()">Click</button>
+        <button class="btn">Handle</button>
+        <button class="anotherone">Another One</button>
+        <button class="otherone">Other One</button>
+    </div>
+    <script>
+        //C1 - on(eventtype)
+        function handleClick() {
+            console.log('Click');
+        }
+        //C2 - DOM
+        const btn = document.querySelector('.btn');
+        btn.onclick = function () {
+            handleClick()
+        }
+        //C3 - eventype
+        const another = document.querySelector('.anotherone');
+        another.addEventListener('click', handleClick);
+        // BT: Tạo nút thứ 4, khi bấm và thi xóa event handleclick của nút thứ 3
+        const other = document.querySelector('.otherone');
+        other.addEventListener('click', function() {
+            another.removeEventListener("click", handleClick);
+        })
+    </script>
+</body>
+</html>

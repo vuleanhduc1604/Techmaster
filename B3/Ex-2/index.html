@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #app {
+            width: 410px;
+            background-color: #ffffff;
+            padding: 30px 30px;
+            border-radius: 8px;
+            position: absolute;
+            transform: translate(-50%,-50%);
+            left: 50%;
+            top: 50%;
+            box-shadow: 0 20px 25px rgba(60,60,100,0.15);
+        }
+        h2 {
+            margin: 0;
+            text-align: center;
+            letter-spacing: 1px;
+            font-family: sans-serif;
+            font-size: 30px;
+            color: black;
+        }
+        p {
+            font-weight: bold;
+            margin: 0;
+            margin-top: 20px;
+        }
+        input {
+            padding: 8px;
+        }
+    </style>
+</head>
+<body>
+    <form id="app">
+        <h2>Tip Calculator</h2>
+        <div id="bill-div">
+            <p>Bill amount</p>
+            <div id="wrapper-bill">
+                <input type="text" id="bill">
+            </div>
+        </div>
+        <div id="guests-div">
+            <p>Number of guests</p>
+            <div id="wrapper-guests">
+                <input type="number" id="guests">
+            </div>
+        </div>
+        <div id="service-div">
+            <p>Service quantity</p>
+            <div id="wrapper service">
+                <select id="service">
+                    <option>choose...</option>
+                    <option>30% - Outstanding</option>
+                    <option>20% - Good</option>
+                    <option>15% - Its OK</option>
+                    <option>10% - Bad</option>
+                    <option>5% - Terrible</option>
+                </select>
+            </div>
+        </div>
+        <div id="tip">
+            <p style="text-align: center">Tip <span id="span"></span> each person</p>
+        </div>
+        <button style="margin-left: 175px;" id="submit">Calculate</button>
+    </form>
+    <script src=script.js></script>
+</body>
+</html>

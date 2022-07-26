@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">Button</button>
+    <input id='input' placeholder="Input"/>
+    <a id="link" href="https://www.google.com">Link</a>
+    <script>
+        const btn = document.getElementById('btn');
+        btn.addEventListener('click', function(e) {
+            alert(e.ctrlKey);
+        })
+        const input = document.getElementById('input');
+        input.addEventListener('input', function(f) {
+            console.log(this.value);
+        })
+        const link = document.getElementById('link');
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+        })
+    </script>
+</body>
+</html>

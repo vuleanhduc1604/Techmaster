@@ -1,0 +1,71 @@
+    * {
+        box-sizing: border-box;
+    }
+    #app {
+        display: block;
+    }
+    #todo {
+        width: 22rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    p {
+        text-align: center;
+    }
+    #flex-gap {
+        display: flex;
+    }
+    #input {
+        flex: 1 1 0%;
+        padding: 0.5rem;
+        border-color: lightgrey;
+        border-style: solid;
+        border-width: 0.5px;
+    }
+    #input:focus {
+        border-color: #6366F1;
+    }
+    ul {
+        list-style: none;
+        padding-left: 0px;
+    }
+    .addBtn {
+        margin-left: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+        background-color: lightslategray;
+        padding-top: 7px;
+        cursor: pointer;
+        color: white;
+        background-color: #6366F1;
+        font-family: Montserrat;
+    }
+    #todoname {
+        font-size: 2rem;
+        line-height: 1;
+        --tw-text-opacity: 1;
+        color: rgb(51 65 85 / var(--tw-text-opacity));
+        font-family: Montserrat;
+        padding-bottom: 5px;
+        border-bottom: solid;
+        border-bottom-color: rgb(51 65 85 / var(--tw-text-opacity))
+    }
+    .close {
+        cursor: pointer;
+    }
+    .close {
+        position: absolute;
+        right: 35%;
+    }
+    .close:hover {
+        opacity: 0.8
+    }
+    #category {
+        display: flex;
+        justify-content: right;
+        margin-top: 10px;
+    }
+    .categorized {
+        font-family: Montserrat, sans-serif;
+        font-size: 15px;
+    }
