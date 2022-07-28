@@ -1,6 +1,5 @@
-//B4
-const arr = [5,3,8,1];
-const filterwithRange = (array, a, b) => array.filter((number) => start <= number && number <= end);
+function hello(name = "Stranger", age = 15, job = 'Student') {
+    console.log(`Hello ${name}`)
+}
 
-
-console.log(filterwithRange(arr, 1, 4))
+hello("Duc");
