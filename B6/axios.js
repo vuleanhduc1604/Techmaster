@@ -31,10 +31,12 @@ const createUserCard = ({name, email, phone}) => {
     phoneEle.classList.add('user-phone');
     phoneEle.textContent = phone;
 
-    card.appendChild(nameEle, emailEle, phoneEle);
+    card.appendChild(nameEle);
+    card.appendChild(emailEle);
+    card.appendChild(phoneEle);
 
     return card;
-}
+};
 
 const renderUser = async () => {
     try {
