@@ -1,0 +1,19 @@
+.delete {
+    display: flex;
+    align-items: center;
+}
+.completed {
+    background-color: lightgreen;
+}
+.todo-wrapper {
+    display: flex;
+}
+
+.delete {
+    margin-right: 30px;
+    cursor: pointer;
+}
+
+.none {
+    display: none;
+}
