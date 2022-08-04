@@ -1,4 +1,4 @@
-import { createTask, getuser } from "./api.js";
+import { createTask, getuser, getTask } from "./api.js";
 // Swtich to profile.html
 document.getElementById('user-info-wrapper').addEventListener('click', () => {
     window.location.href = "profile.html";
@@ -29,12 +29,14 @@ formTask.addEventListener('submit', async (e) => {
     try {
         const { data, headers } = await createTask({title});
         alert('Task created');
+        location.reload();
     } catch (err) {
         console.log(err);
         alert('Task phải có tối thiểu 2 từ')
     }
 });
 
+// Profile loader
 const loadProfile = async () => {
     const loadprofileCard = (firstname, lastname) => {
         let profileWrapper = document.querySelector('#user-info-wrapper');
@@ -69,3 +71,38 @@ const loadProfile = async () => {
 };
 
 loadProfile();
+
+// Render tasks
+const createTodo = ( {title, completed} ) => {
+    const todoWrapper = document.createElement('div');
+    todoWrapper.classList.add('todo-wrapper');
+    const deleteEle = document.createElement('span');
+    deleteEle.classList.add('delete');
+    deleteEle.textContent = "X";
+    const titleEle = document.createElement('p');
+    titleEle.classList.add('title');
+    titleEle.textContent = title;
+    if (completed) {
+        todoWrapper.classList.add('completed');
+    }
+    deleteEle.addEventListener('click', function() {
+        todoWrapper.style.display = 'none';
+    });
+    todoWrapper.appendChild(deleteEle);
+    todoWrapper.appendChild(titleEle);
+    return todoWrapper;
+};
+
+const renderTodo = async () => {
+    try {
+        const {data, header} = await getTask();
+        console.log(data);
+        const todos = data.data.map(createTodo);
+        document.querySelector('.todolist').append(...todos);
+    } catch (err) {
+        console.log(err);
+        alert('Something went wrong. Please try again')
+    }
+}
+
+renderTodo();

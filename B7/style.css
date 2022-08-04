@@ -76,3 +76,16 @@ span {
     from {top: -300px; opacity: 0}
     to {top: 0; opacity: 1}
 }
+/* Todo CSS */
+.delete {
+    display: flex;
+    align-items: center;
+    margin-right: 30px;
+    cursor: pointer;
+}
+.completed {
+    background-color: lightgreen;
+}
+.todo-wrapper {
+    display: flex;
+}

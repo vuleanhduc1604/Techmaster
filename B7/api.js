@@ -110,7 +110,7 @@ export const changeName = async(user) => {
         console.log(err);
     }
 };  
-
+// Not working
 export const changeAvatar = async(user) => {
     const token = localStorage.getItem('token');
 
@@ -135,5 +135,28 @@ export const changeAvatar = async(user) => {
     } catch (err) {
         console.log(err);
         alert('Something went wrong. Please try again.')
+    }
+};
+
+export const getTask = async(user) => {
+    const token = localStorage.getItem('token');
+    
+    try {
+        let headers = {
+            "Authorization": `Bearer ${token}`,
+            "Content-type": "application/json" 
+        }
+
+        let bodyContent = JSON.stringify(user);
+        let reqOptions = {
+            url: "https://todo-api-with-auth.herokuapp.com/api/tasks",
+            method: "GET",
+            data: bodyContent,
+            headers
+        };
+
+        return axios.request(reqOptions);
+    } catch (err) {
+        console.log(err);
     }
 };
