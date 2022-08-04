@@ -98,3 +98,16 @@ formAvatar.addEventListener('submit', async (f) => {
         console.log(err);
     }
 });
+
+// Sign out
+let signoutBtn = document.querySelector('.sign-out-btn');
+signoutBtn.addEventListener('click', () => {
+    localStorage.clear('token');
+    window.location.href = 'signin.html'
+});
+
+// Back to Todo
+let backtoTodoBtn = document.querySelector('.goback-btn');
+backtoTodoBtn.addEventListener('click', () => {
+    window.location.href = 'index.html';
+})

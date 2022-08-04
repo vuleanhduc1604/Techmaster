@@ -32,7 +32,7 @@ span {
     align-items: center;
 }
 /* Submit & Modal CSS */
-.submit-name, .submit-avatar {
+.submit-name, .submit-avatar, .sign-out-btn, .goback-btn {
     color: white;
     font-family: Montserrat, sans-serif;
     font-weight: 600;
