@@ -4,12 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
     <title>Todo API</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header class="header">
-        <div class="wrapper">
+        <div class="wrapper flex space-around">
+            <div class="header-wrapper center">
+                <span class="header-text">Todo</span>
+            </div>
             <div class="flex" id="user-info-wrapper"></div>
         </div>
     </header>
@@ -29,7 +35,7 @@
                     <div class="flex">
                         <p class="title">Title task:</p>
                         <input type="text" name="titleContent" class="title-content">
-                        <button class="sumbit-task">Sumbit</button>
+                        <button class="submit-task">Submit</button>
                     </div>
                 </form>
             </div>

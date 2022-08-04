@@ -1,5 +1,8 @@
 import { createTask, getuser } from "./api.js";
-
+// Swtich to profile.html
+document.getElementById('user-info-wrapper').addEventListener('click', () => {
+    window.location.href = "profile.html";
+});
 // Modal appear
 let btn = document.querySelector(".createbtn");
 let modal = document.querySelector(".modal");
@@ -28,7 +31,7 @@ formTask.addEventListener('submit', async (e) => {
         alert('Task created');
     } catch (err) {
         console.log(err);
-        alert('Something went wrong. Please try again')
+        alert('Task phải có tối thiểu 2 từ')
     }
 });
 
@@ -40,11 +43,13 @@ const loadProfile = async () => {
         userInfo.classList.add('flex');
         const userAvatarWrapper = document.createElement('div');
         userAvatarWrapper.classList.add('user-avatar-wrapper');
+        userAvatarWrapper.classList.add('center');
         const avatar = document.createElement('img');
         avatar.classList.add('user-avatar');
         avatar.src = "avatar-test.jpeg";
         const usernameWrapper = document.createElement('div');
         usernameWrapper.classList.add('username-wrapper');
+        usernameWrapper.classList.add('center');
         const username = document.createElement('span');
         username.classList.add('username');
         username.innerHTML = `${firstname} ${lastname}`

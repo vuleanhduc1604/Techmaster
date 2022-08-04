@@ -1,15 +1,21 @@
 .flex {
     display: flex;
 }
-.center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 .space-around {
     justify-content: space-around;
 }
-
+.main {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.title-name-wrapper, .title-avatar-wrapper {
+    margin-top: 10px;
+}
+input {
+    padding: 10px;
+    margin: 10px 10px 10px 0;
+}
 /* Avatar & Username CSS */
 .user-avatar {
     width: 50px;
@@ -21,15 +27,12 @@
 span {
     font-family: Montserrat, sans-serif;
 }
-#user-info-wrapper {
-    cursor: pointer;
-}
-.username {
+.username-wrapper {
     display: flex;
     align-items: center;
 }
-/* Modal CSS */
-.createbtn {
+/* Submit & Modal CSS */
+.submit-name, .submit-avatar {
     color: white;
     font-family: Montserrat, sans-serif;
     font-weight: 600;
@@ -39,19 +42,18 @@ span {
     border-style: none;
     border-radius: 2px;
     cursor: pointer;
-
 }
-.text {
+.text-name, .text-avatar {
     cursor: pointer;
     font-family: Montserrat, sans-serif;
 }
-.createbtn:hover {
+.submit-name:hover, .submit-avatar:hover {
     opacity: 0.8;
 }
-.createbtn:active {
+.submit-name:active, .submit-avatar:active {
     opacity: 0.7;
 }
-.modal {
+.modal-name, .modal-avatar {
     position: fixed; 
     display: none;
     z-index: 1; 
@@ -62,7 +64,7 @@ span {
     background-color: rgba(0,0,0,0.7);
 }
 
-.modal-content {
+.modal-content-name, .modal-content-avatar {
     position: relative;
     background-color: #fefefe;
     margin: 30px auto; 

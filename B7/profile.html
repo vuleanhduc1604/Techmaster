@@ -4,15 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="profile.css">
     <title>Profile</title>
-    <style>
-        img {
-            width: 50px;
-        }
-        .flex {
-            display: flex;
-        }
-    </style>
 </head>
 <body>
     <header class="header">
@@ -20,24 +13,56 @@
             <div class="flex" id="user-info-wrapper"></div>
         </div>
     </header>
-    <button class="changenamebtn">Change Name</button>
-    <div class="modal">
-        <div class="modal-content">
-            <span class="text">
-                &#10006
-            </span>
-            <div class="modal-sumbit">
-                <form class="changeName">
-                    <div class="flex">
-                        <p class="title">Name change:</p>
-                        <input type="text" name="firstname" class="firstname" placeholder="First Name...">
-                        <input type="text" name="lastname" class="lastname" placeholder = "Last Name...">
-                        <button class="sumbit-task">Sumbit</button>
+    <main class="main">
+        <div class="name-change">
+            <button class="submit-name">Change Name</button>
+            <div class="modal-name">
+                <div class="modal-content-name">
+                    <span class="text-name">
+                        &#10006
+                    </span>
+                    <div class="modal-sumbit-name">
+                        <form class="changeName">
+                            <div>
+                                <div class="title-name-wrapper">
+                                    <span class="title-name">Name change:</span>
+                                </div>
+                                <div class="name-input">
+                                    <input type="text" name="firstname" class="firstname" placeholder="First Name...">
+                                    <input type="text" name="lastname" class="lastname" placeholder = "Last Name...">
+                                </div>
+                                <button class="submit-name">Submit</button>
+                            </div>
+                        </form>
                     </div>
-                </form>
+                </div>
             </div>
         </div>
-    </div>
+        <div class="avatar-change">
+            <button class="submit-avatar">Change Avatar</button>
+            <div class="modal-avatar">
+                <div class="modal-content-avatar">
+                    <span class="text-avatar">
+                        &#10006
+                    </span>
+                    <div class="modal-sumbit-avatar">
+                        <form class="changeAvatar">
+                            <div>
+                                <div class="title-avatar-wrapper">
+                                    <span class="title-avatar">Select a photo:</span>
+                                </div>
+                                <div class="avatar-input">
+                                    <input type="file" name="avatar" class="avatar" placeholder="Choose a photo...">    
+                                </div>
+                                <button class="submit-avatar">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="profile.js" type="module"></script>
 </body>
