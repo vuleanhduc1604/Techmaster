@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Sign in pls</title>
+    <style>
+        .username-wrapper, .password-wrapper {
+            display: flex;
+        }
+        label {
+            margin-right: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <form action="" class="login">
+            <div class="form-header">
+                <div class="form-heading">
+                    <h1 class="header">Sign in pls</h1>
+                </div>
+            </div>
+            <div class="form-body">
+                <div class="username-wrapper">
+                    <label for="username">Username</label>
+                    <input type="text" name="username" class="username"/>
+                </div>
+                <div class="password-wrapper">
+                    <label for="username">Password</label>
+                    <input type="password" name="password" class="password"/>
+                </div>
+            </div>
+            <div class="form-footer">
+                <button class="btn-submit">Log me in</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="signin.js" type="module"></script>
+</body>
+</html>

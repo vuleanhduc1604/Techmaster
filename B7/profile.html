@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <style>
+        img {
+            width: 50px;
+        }
+        .flex {
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="wrapper flex">
+            <div class="flex" id="user-info-wrapper"></div>
+        </div>
+    </header>
+    <button class="changenamebtn">Change Name</button>
+    <div class="modal">
+        <div class="modal-content">
+            <span class="text">
+                &#10006
+            </span>
+            <div class="modal-sumbit">
+                <form class="changeName">
+                    <div class="flex">
+                        <p class="title">Name change:</p>
+                        <input type="text" name="firstname" class="firstname" placeholder="First Name...">
+                        <input type="text" name="lastname" class="lastname" placeholder = "Last Name...">
+                        <button class="sumbit-task">Sumbit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="profile.js" type="module"></script>
+</body>
+</html>
