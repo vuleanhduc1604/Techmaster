@@ -1,3 +1,4 @@
+
 .flex {
     display: flex;
 }
@@ -29,7 +30,7 @@ span {
     align-items: center;
 }
 /* Modal CSS */
-.createbtn {
+.createbtn, .submit-task {
     color: white;
     font-family: Montserrat, sans-serif;
     font-weight: 600;
@@ -40,6 +41,13 @@ span {
     border-radius: 2px;
     cursor: pointer;
 
+}
+.title-wrapper {
+    margin-top: 10px;
+}
+input {
+    padding: 10px;
+    margin: 10px 10px 10px 0;
 }
 .text {
     cursor: pointer;
@@ -88,4 +96,29 @@ span {
 }
 .todo-wrapper {
     display: flex;
+    cursor: pointer;
+    position: relative;
+    padding: 12px 8px 12px 40px;
+    background: #eee;
+    font-size: 18px;
+    transition: 0.2s;
+}
+.todo-wrapper:nth-child(odd) {
+    background: #f9f9f9;
+}
+.todo-wrapper:hover {
+    background: #ddd;
+}
+.checked-todo-wrapper {
+    background: #888;
+    display: flex;
+    cursor: pointer;
+    position: relative;
+    padding: 12px 8px 12px 40px;
+    font-size: 18px;
+    transition: 0.2s;
+}
+.checked-text {
+    color: #fff;
+    text-decoration: line-through;
 }

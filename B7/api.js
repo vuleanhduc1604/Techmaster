@@ -160,3 +160,23 @@ export const getTask = async(user) => {
         console.log(err);
     }
 };
+
+export const deleteTask = async(user) => {
+    const token = localStorage.getItem('token');
+    try {
+        let headers = {
+            "Authorization": `Bearer ${token}`,
+            "Content-type": "application/json"
+        }
+
+        let reqOptions = {
+            url: `https://todo-api-with-auth.herokuapp.com/api/tasks/${user}`,
+            method: "DELETE",
+            headers
+        };
+
+        return axios.request(reqOptions);
+    } catch (err) {
+        console.log(err)
+    }
+};

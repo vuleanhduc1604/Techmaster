@@ -1,4 +1,4 @@
-import { createTask, getuser, getTask } from "./api.js";
+import { createTask, getuser, getTask, deleteTask } from "./api.js";
 // Swtich to profile.html
 document.getElementById('user-info-wrapper').addEventListener('click', () => {
     window.location.href = "profile.html";
@@ -73,7 +73,7 @@ const loadProfile = async () => {
 loadProfile();
 
 // Render tasks
-const createTodo = ( {title, completed} ) => {
+const createTodo = ( {title, completed, id} ) => {
     const todoWrapper = document.createElement('div');
     todoWrapper.classList.add('todo-wrapper');
     const deleteEle = document.createElement('span');
@@ -85,8 +85,19 @@ const createTodo = ( {title, completed} ) => {
     if (completed) {
         todoWrapper.classList.add('completed');
     }
-    deleteEle.addEventListener('click', function() {
+    deleteEle.addEventListener('click', async function() {
         todoWrapper.style.display = 'none';
+        try {
+            const {data, header} = await deleteTask(id);
+            alert("Deleted successfully");
+        } catch (err) {
+            console.log(err)
+        }
+    });
+    todoWrapper.addEventListener('click', () => {
+        todoWrapper.classList.toggle("checked-todo-wrapper");
+        todoWrapper.classList.toggle("todo-wrapper");
+        titleEle.classList.toggle("checked-text");
     });
     todoWrapper.appendChild(deleteEle);
     todoWrapper.appendChild(titleEle);
@@ -106,3 +117,4 @@ const renderTodo = async () => {
 }
 
 renderTodo();
+
