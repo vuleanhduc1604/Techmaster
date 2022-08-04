@@ -25,7 +25,7 @@ span {
 #user-info-wrapper {
     cursor: pointer;
 }
-.username {
+.username-wrapper {
     display: flex;
     align-items: center;
 }

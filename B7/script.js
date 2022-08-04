@@ -38,20 +38,18 @@ formTask.addEventListener('submit', async (e) => {
 
 // Profile loader
 const loadProfile = async () => {
-    const loadprofileCard = (firstname, lastname) => {
+    const loadprofileCard = (firstname, lastname, src) => {
         let profileWrapper = document.querySelector('#user-info-wrapper');
         const userInfo = document.createElement('div');
         userInfo.classList.add('user-info');
         userInfo.classList.add('flex');
         const userAvatarWrapper = document.createElement('div');
         userAvatarWrapper.classList.add('user-avatar-wrapper');
-        userAvatarWrapper.classList.add('center');
         const avatar = document.createElement('img');
         avatar.classList.add('user-avatar');
-        avatar.src = "avatar-test.jpeg";
+        avatar.src = `https://todo-api-with-auth.herokuapp.com${src}`;
         const usernameWrapper = document.createElement('div');
         usernameWrapper.classList.add('username-wrapper');
-        usernameWrapper.classList.add('center');
         const username = document.createElement('span');
         username.classList.add('username');
         username.innerHTML = `${firstname} ${lastname}`
@@ -63,10 +61,9 @@ const loadProfile = async () => {
     };  
     try {
         const { data, headers } = await getuser();
-        loadprofileCard(data.data.firstname, data.data.lastname);
+        loadprofileCard(data.data.firstname, data.data.lastname, data.data.avatar);
     } catch (err) {
         console.log(err);
-        alert('Something went wrong. Reload the page or log out')
     }
 };
 
