@@ -1,0 +1,34 @@
+/* Container -> Row -> Column -> Content */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.app {
+    display: flex;
+    flex-wrap: wrap;
+}
+.cell {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+img {
+    max-width: 100%;
+}
+
+.title {
+    text-align: justify;
+}
+.title-overflow {
+    text-overflow:ellipsis;
+    overflow:hidden;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    white-space: normal;
+}
+/* Mobile first */
+/* Mặc định cho màn hình bé trước (base - xs) */
+
+/* Kích thước màn hình vượt quá 576px ~ sm */

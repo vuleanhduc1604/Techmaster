@@ -1,0 +1,36 @@
+
+img {
+    max-width: 100%;
+}
+.dropdown-button {
+    width: 100%;
+    font-size: .75rem;
+    background-color: transparent;
+    border-style: none;
+}
+.avatar {
+    border-radius: 1000px;
+    width: 75%;
+}
+.logo-wrapper {
+    margin-right: 10px;
+}
+.notif-counter {
+    display: inline-block;
+    width: 9px;
+    font-size: .3rem;
+    background-color: red;
+    color: white;
+    border-style: none;
+    border-radius: 1000px;
+    position: relative;
+    top: -1.5em;
+    left: -1em;
+    padding: .3em;
+    text-align: center;
+}
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
