@@ -2,11 +2,13 @@
 img {
     max-width: 100%;
 }
-.dropdown-button {
-    width: 100%;
-    font-size: .75rem;
+.button-invis {
     background-color: transparent;
     border-style: none;
+}
+.dropdown-button {
+    width: 100%;
+    font-size: .75rem
 }
 .avatar {
     border-radius: 1000px;
@@ -33,4 +35,12 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.search-wrapper {
+    display: none;
+}
+@media screen and (min-width: 401px) {
+    .search-wrapper {
+        display:flex
+    }
 }
