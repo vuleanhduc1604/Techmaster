@@ -1,4 +1,3 @@
-$(document).ready(function(){
-    $('.slideshow-popular').slick();
-  });
-        
+document.querySelector('.dropdown-button').addEventListener('click', () => {
+  document.querySelector('.dropdown-content').classList.toggle('d-block')
+})       
