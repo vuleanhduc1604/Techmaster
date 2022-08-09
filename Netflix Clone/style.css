@@ -4,19 +4,66 @@ main {
 img, video {
     max-width: 100%;
 }
+.description {
+    color: white;
+    margin-bottom: 10px;
+    font-weight: 500;
+    text-shadow: .7px .7px black
+}
+i {
+    margin-right: 4px;
+}
+
+.play {
+    background-color: white;
+    color: black;
+    padding: 5px 20px 5px 20px;
+    cursor: pointer;
+    margin-right: 10px;
+    border-style: none;
+    border-radius: 5px;
+}
+.play:hover {
+    opacity: 0.8;
+}
+.info {
+    background-color: rgba(89,89,89,0.6);
+    padding: 7px 20px 7px 20px;
+    cursor: pointer;
+    color: black;
+    border-style: none;
+    border-radius: 5px;
+}
+.info:hover {
+    opacity: 0.5;
+}
 .previewOverlay {
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: black;
-    opacity: 0.8;
+    background-color: rgba(0,0,0,0.5);
     z-index: 1000;
+}
+.previewContainer {
+    position: relative;
+    display: flex;
 }
 .logo {
     width: 65px;
 }
+.title-overflow {
+    text-overflow:ellipsis;
+    overflow:hidden;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    white-space: normal;
+}
 body {
     background-color: #141414;
+}
+.mainDetails {
+    margin: 20px;
 }
 .dropdown-content {
     display: none;
@@ -139,4 +186,10 @@ h4 {
 }
 .header {
     margin-top: 13px;
+    margin-bottom: 13px;
 }
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%
+  }
