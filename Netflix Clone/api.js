@@ -14,7 +14,6 @@ export const getAPI = async (url) => {
             url: base_url + url + api_key,
             method: "GET",
         };
-        console.log(axios.request(reqOptions))
         return axios.request(reqOptions);
 
     } catch (err) {
