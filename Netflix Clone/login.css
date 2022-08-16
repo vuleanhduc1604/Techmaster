@@ -1,0 +1,33 @@
+
+.background-img {
+    min-width: 100%;
+    min-height: 100%;
+    border-style: none;
+}
+.background {
+    display: block;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+.background-opacity {
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.logo {
+    position: absolute;
+    z-index: 2;
+    width: 167px;
+    overflow: hidden;
+    padding-top: 20px;
+}
+.logo-wrapper {
+    margin-left: 3%;
+
+}

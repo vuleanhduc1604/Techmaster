@@ -29,7 +29,7 @@ const createTodo = ( {title, completed} ) => {
 const renderTodo = async () => {
     try {
         const { data } = await getTodos();
-
+        console.log(data)
         const todos = data.map(createTodo);
 
         document.querySelector('.todos-list').append(...todos);
