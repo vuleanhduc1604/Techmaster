@@ -9,6 +9,7 @@ const best_drama_url = "/discover/movie?with_genres=18&sort_by=vote_average.desc
 const createRequestToken = "/authentication/token/new"
 const authenticateRequestToken_url = "https://www.themoviedb.org/authenticate/"
 const createsession_url = "/authentication/session/new"
+const moviesearch_url = "/search/movie"
 // Get Film Data
 export const getAPI = async (url) => {
 
@@ -17,7 +18,6 @@ export const getAPI = async (url) => {
             url: base_url + url + "&api_key=" + api_key,
             method: "GET",
         };
-        console.log(axios.request(reqOptions));
         return axios.request(reqOptions);
 
     } catch (err) {
@@ -137,10 +137,43 @@ const fetchsessionID = async() => {
 }
 
 // Check if session ID is available
-if (localStorage.getItem("session_id") === null) {
-    if (localStorage.getItem("request_token") === null) {
-        redirectToAuthentication();
-    } else {
-        fetchsessionID();
+
+// Search film API
+const searchFilm = async(uri) => {
+    try {
+        let reqOptions = {
+            url: base_url + moviesearch_url + "?api_key=" + api_key + "&query=" + `${encodeURIComponent(uri)}`
+        }
+        console.log(`${encodeURIComponent(uri)}`)
+        console.log(axios.request(reqOptions))
+        return axios.request(reqOptions)
+    } catch (err) {
+        console.log(err)
     }
 }
+// Render film search
+const renderSearchFilm = async({backdrop_path}) => {
+    const wrapper = document.createElement('div');
+    wrapper.classList.add("film-item")
+    const img = document.createElement('img');
+    img.src = `${img_url}${backdrop_path}`
+    wrapper.appendChild(img);
+    if (img.src == "https://image.tmdb.org/t/p/w500null") {
+        wrapper.style.display = 'none';
+    }
+    const wrappers = document.querySelector(".search-display");
+    wrappers.appendChild(wrapper);
+    return wrapper;
+}
+document.querySelector('.form-search').addEventListener('submit', async (e) => {
+    try {
+        e.preventDefault();
+        const uritobeencoded = document.querySelector('.search').value;
+        const {data} = await searchFilm(uritobeencoded);
+        data.results.forEach(element => {
+            renderSearchFilm(element)
+        });
+    } catch (err) {
+        console.log(err)
+    }
+})

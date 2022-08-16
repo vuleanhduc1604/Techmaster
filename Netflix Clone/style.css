@@ -238,3 +238,15 @@ h4 {
 i {
     cursor: pointer;
 }
+.search-display {
+    width: 100%;
+    margin: 0 auto 0 auto;
+    display: none;
+    overflow: hidden;
+    background-color: black;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+.film-item {
+    width: 400px;
+}

@@ -28,3 +28,11 @@ function activateSearch() {
   searchBox.classList.toggle("active-search");
   searchIcon.classList.toggle('active-searchTab');
 }
+
+// Appear search wrapper on change
+document.querySelector('.form-search').addEventListener('submit', async (e) => {
+  e.preventDefault();
+  document.querySelector('.search-display').style.display = "flex";
+  document.querySelector('.previewContainer').style.display = "none";
+  document.querySelector('.film-display').style.display = "none";
+})

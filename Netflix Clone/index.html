@@ -58,7 +58,9 @@
                             </path>
                         </svg>
                     </button>
-                    <input type="text" class="search" placeholder="Titles, People, Genre">
+                    <form action="" class="form-search">
+                        <input type="text" class="search" placeholder="Titles, People, Genre">
+                    </form>
                 </div>
                 <div class="notif-wrapper center col-6">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="Hawkins-Icon Hawkins-Icon-Standard">
@@ -72,6 +74,8 @@
             </div>
         </div>
     </header>
+    <main class="main">
+    <div class="search-display"></div>  
     <div class="previewContainer">
         <div class="video-wrapper">
             <video autoplay src="assets/video.webm"></video>
@@ -97,7 +101,7 @@
             </div>
         </div>
     </div>
-    <main class="main">
+    <div class="film-display">
         <h4 class="text-white">
             Trending now
         </h4>
@@ -123,6 +127,7 @@
         </h4>
         <div class="ferrell-comedies d-flex align-items-center">
         </div>
+    </div>     
     </main>
     <footer class="footer">
         
@@ -133,7 +138,7 @@
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="api.js" type="module"></script>
-    <script type="text/javascript" src="script.js"></script>
+    <script src="script.js"></script>
 
 </body>
 </html>
