@@ -1,0 +1,225 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto, sans-serif;
+}
+.menu {
+    display: flex;
+    justify-content: space-between;
+    min-width: 700px;
+}
+.logo-sk {
+    max-height: 63px;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    align-items: center;
+    padding-left: 100px;
+    padding-right: 100px;
+    background-color: #ffffff;
+}
+a, .menu-content {
+    text-decoration: none;
+    font-family: Roboto, Times, serif;
+    font-size: 18px;
+    color: rgb(133,133,133);
+}
+a:hover, .menu-content:hover {
+    color: #c5590f;
+}
+.dropdown-menu-2, .dropdown-menu-3 {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    padding: 1rem 1rem 1rem 1rem;
+}
+.menu-top {
+    margin-top: 1rem;
+}
+.menu-2:hover, .menu-3:hover{
+    cursor: pointer;
+}
+.menu-2:hover .dropdown-menu-2 {
+    display: block;
+}
+.menu-2:hover .menu-anchor-2 {
+    color: #c5590f;
+}
+.menu-3:hover .dropdown-menu-3 {
+    display: block;
+}
+.menu-3:hover .menu-anchor-3 {
+    color: #c5590f;
+}
+.sub-menu:hover {
+    border-top: 10px;
+    border-color: #c5590f;
+}
+.banner-img {
+    width: 100%;
+}
+.slick-dots {
+    color: #c5590f;
+}
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%
+  }
+.sticky + .body {
+    padding-top: 102px;
+}
+.banner {
+    z-index: -1;
+}
+.content-header {
+    font-size: 30px;
+    font-weight: 700;
+    color: rgb(197,89,15);;
+}
+.grey-bold {
+    color: #595959
+}
+.who-are-we {
+    width: 900px;
+}
+.img-1, .img-2 {
+    width: 432px;
+}
+.quote-wrapper {
+    margin-left: 20px;
+    padding-left: 7px;
+    border-left-style: solid;
+    border-left-width: 5px;
+    border-color: #c5590f;
+}
+.find-out-btn {
+    color: #ffffff;
+    background-color: #c5590f;
+    border-style: none;
+    border-radius: 5px;
+    padding: 3px 20px 3px 20px;
+}
+.clients-profit {
+    width: 900px;
+}
+.service-wrapper, .service-bg {
+    width: 800px;
+    margin: auto;
+}
+.img-bg, .img-bg-2, .img-bg-3 {
+    position: absolute;
+    z-index: -1;
+    width: 228px;
+}
+.service-bg {
+    position: absolute;
+    z-index: -2;
+}
+.bg-1, .bg-2, .bg-3, .bg-service {
+    width: 100%;
+}
+.service-desc {
+    font-size: 15px;
+}
+.service-1, .service-2, .service-3 {
+    width: 228px;
+    height: 268px;
+}
+.service-desc, .service-head {
+    margin-bottom: 4px;
+    text-align: center;
+}
+.service-head-1, .service-head-2, .service-head-3 {
+    font-size: 15px;
+    font-family: 'Roboto Condensed', sans-serif;
+    text-align: center;
+}
+.service-head-1 {
+    color: #c5590f;
+}
+.service-head-2 {
+    color: #FFC000;
+}
+.service-head-3 {
+    color: #393939;
+}
+.content-service-1, .content-service-2, .content-service-3 {
+    margin: auto;
+    margin-top: 100px;
+}
+input, .problem {
+    display: block;
+    width: 326px;
+    font-size: 14px;
+    line-height: 19.6px;
+    padding: 3px 3px 3px 14px;
+    min-height: 34px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: rgb(145,145,145);
+    margin-bottom: 10px;
+    border-radius: 2px;
+}
+.left-wrapper {
+    margin-right: 15px;
+}
+.problem {
+    min-height: 78px;
+    padding-top: 6px;
+}
+.submit-contact {
+    padding: 3px 50px 3px 50px;
+    margin-top: 10px;
+    background-color: #ffffff;
+    color: #c5590f;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 20px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: black; 
+    transition-duration: .3s;
+}
+.submit-contact:hover {
+    background-color: #c5590f;
+    color: white;
+    border-color: #c5590f;
+    transition-duration: .3s;
+}
+.footer {
+    background-image: url(assets/Footer.webp);
+    width: 100%;
+    padding: 0px 300px 0px 300px;
+}
+.submit-footer {
+    padding: 3px 35px 3px 35px;
+    margin-top: 10px;
+    background-color: #c5590f;
+    color: #ffffff;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 20px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #c5590f; 
+    transition-duration: .3s;
+}
+.submit-footer:hover {
+    background-color: #ffffff;
+    color: #c5590f;
+    border-color: black;
+    transition-duration: .3s;
+}
+.news-header, .info-header, .social-header {
+    color: #ffffff;
+    font-size: 30px;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+.news-content, .info-content {
+    font-size: 16px;
+    color: #ffffff;
+    font-family: Roboto, sans-serif;
+    font-weight: 350;
+}
