@@ -90,7 +90,8 @@ function App() {
         role: "ADMIN"
     }
     return <div>
-        <Sth {...data}/> 
+        <Hello/> 
+        <Name />
         <Time />
     </div>
 }

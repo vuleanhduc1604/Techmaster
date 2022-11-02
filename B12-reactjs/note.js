@@ -21,3 +21,4 @@ Props: Là mô hình dữ liệu cơ bản nhất trong React, cho phép truyề
 - Props có thể nhận bất kỳ dữ liệu gì (có thể object, số, boolean, function, component,...)
 - Trừ chuỗi thì có thể truyền trực tiếp 'name = "React"', còn lại tất cả các kiểu dữ liệu khác thì phải đặt trong { }
 */
+// Props là read onlu (không thể thay đổi)
