@@ -1,8 +1,14 @@
 function App() {
+    const user = {
+        name:"React",
+        isAdmin: true,
+    }
+    const names = ["Ba", "Sơn", "Bon"]
+    
     return (
-        <div>
-            <Hello name="React"/>
-            <Hello name="st"/>
+        <div className="container">
+            {names.map((name) => (<Hello name={name} />))}
+            <User user={user} />
         </div>
     )
 }
