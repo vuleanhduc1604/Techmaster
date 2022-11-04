@@ -1,6 +1,6 @@
 function Pokemon({pokemon}) {
     return (
-        <div className="card-wrapper">
+        <div className="card-wrapper" key={pokemon.id}>
             <p className="card-name">{pokemon.name}</p>
             <img src={pokemon.image} alt="image"></img>
             <p className="type">Type: {pokemon.type}</p>
