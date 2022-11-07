@@ -1,0 +1,28 @@
+.music-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.time {
+    text-align: center;
+}
+.controls-right {
+    display: flex
+}
+img {
+    width: 90px;
+}
+.volume-bar {
+    width: 100px;
+    background-color: black;
+    height: 10px;
+}
+.author-avatar, .controls-right {
+    align-items: center;
+    border-radius: 50%;
+}
+.volume-bar {
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 5px;
+}
