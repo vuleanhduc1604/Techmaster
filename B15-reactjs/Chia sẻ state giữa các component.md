@@ -22,7 +22,7 @@
 - Unmount:
   - componentWillUnmount()
 
-![](Aspose.Words.4e62c4a6-2e00-4f5e-b271-14a663ac2b2b.001.png)
+![](Aspose.Words.8b611b07-1902-4941-8e95-47f302fb9d21.001.png)
 
 **Hạn chế của Lifecycle methods trong class component**
 
