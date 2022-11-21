@@ -113,11 +113,6 @@ root5.render(<Timer />)
 const root6 = ReactDOM.createRoot(document.querySelector('#app6'));
 const Color = () => {
     const [count, setCount] = React.useState(0);
-    const demoRef = React.useRef(0);
-    const changeDemoRef = () => {
-        demoRef.current = Math.floor(Math.random() * 100);
-        console.log(demoRef)
-    }
     const increment = () => {
         setCount(count + 1)
     };
