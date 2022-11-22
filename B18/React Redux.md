@@ -124,7 +124,7 @@ export default function appReducer(state = initialState, action) {
 
 ```
 
-Lưu ý: Một reducer không được phép 
+Lưu ý: Một reducer không được phép chứa các hàm có side effect như `Date.now()` hoặc `Math.random()` aka chỉ được phép là **"pure" function**
 
 **VII/ Store, Subscribe và Dispatch**
 
