@@ -22,41 +22,41 @@
 
 - Trong Redux, hầu hết các object, array sẽ không được thay đổi (bất biến) nên để thay đổi các value trong object, array ta phải tạo một object, array mới rồi mới thay đổi:
 
-\```js
+```js
 
 const obj = {
 
-`  `a: {
+  a: {
 
-`    `// Để thay đổi obj một cách an toàn thì ta cần phải copy obj
+    // Để thay đổi obj một cách an toàn thì ta cần phải copy obj
 
-`    `c: 3
+    c: 3
 
-`  `},
+  },
 
-`  `b: 2
+  b: 2
 
 }
 
 const obj2 = {
 
-`  `// copy obj
+  // copy obj
 
-`  `...obj,
+  ...obj,
 
-`  `// overwrite a
+  // overwrite a
 
-`  `a: {
+  a: {
 
-`    `// copy obj.a
+    // copy obj.a
 
-`    `...obj.a,
+    ...obj.a,
 
-`    `// overwrite c
+    // overwrite c
 
-`    `c: 42
+    c: 42
 
-`  `}
+  }
 
 }
 
@@ -74,55 +74,55 @@ const arr3 = arr.slice()
 
 arr3.push('c')
 
-\```
+```
 
 **V/ Action**
 
 - Là một object thường bao gồm hai field: `type` và `payload`
 - Giá trị `type` thường được dùng để xác định công việc mà một Reducer cần làm và `payload` là giá trị cho Reducer làm công việc của mình
 
-\```js
+```js
 
 const INCREMENT = {
 
-`	`type = ‘todo/increment’,
+	type = ‘todo/increment’,
 
-`	`payload = 1
+	payload = 1
 
 }
 
-\```
+```
 
 **VI/ Reducer**
 
 - Là một function gồm hai tham số: state và action
 - Reducer được dùng để cập nhật lại giá trị state của kho chung (Store)
 
-\```js
+```js
 
 // Lấy intialState làm giá trị ban đầu
 
 export default function appReducer(state = initialState, action) {
 
-`  `// Reducer thường cần có action.type để xác định cần phải làm gì
+  // Reducer thường cần có action.type để xác định cần phải làm gì
 
-`  `switch (action.type) {
+  switch (action.type) {
 
-`    `// Lm gì đó dựa trên action
+    // Lm gì đó dựa trên action
 
-`    `default:
+    default:
 
-`      `// Nếu như reducer ko nhận đc action.type
+      // Nếu như reducer ko nhận đc action.type
 
-`      `// thì return state ban đầu
+      // thì return state ban đầu
 
-`      `return state
+      return state
 
-`  `}
+  }
 
 }
 
-\```
+```
 
 Lưu ý: Một reducer không được phép 
 
